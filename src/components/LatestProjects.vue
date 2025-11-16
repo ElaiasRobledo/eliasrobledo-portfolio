@@ -67,17 +67,17 @@ const Projects = ref([
     category: "web development",
     image: "/estacion-2.png",
     message: 'This was my first project, and thanks to it I learned how a RESTful API work, from development and database integration to managing JSON data, testing, and deploying the application to servers. This experience also taught me the importance of teamwork and delivering effective solutions for end clients.',
-    title: "Weve business backend",
+    title: "Business management panel",
     description: "This service allows you to create electric charging stations and connect chargers to them.",
     technologies: [".NET 6", "MongoDB", "Azure Blob Storage", "Azure DevOps"]
   },
   {
     id: 3,
     category: "web development",
-    image: "/weve-admin.png",
-    message:'This platform provides Weve’s owner with an organized and structured way to visualize data from all users, charging stations, and various related objects. Weve admin has features such as banning users, deleting charging stations, and sending global notifications.',
-    title: "Weve admin backend",
-    description: "Platform that controls and monitors Weve business users.",
+    image: "/admin-panel.png",
+    message:'This platform provides owners an organized and structured way to visualize data from all users, charging stations, and various related objects. This administration panel has features such as banning users, deleting charging stations, and sending global notifications.',
+    title: "Administration panel",
+    description: "Platform that controls and monitors business users.",
     technologies: [".NET 6", "MongoDB"]
   },
   {
