@@ -7,7 +7,7 @@
           <h2 class="text-4xl font-bold text-center">My <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-secondary"> Education</span></h2>
 
           <div v-for="element in education" :key="element.id"
-            class="flex items-center md:w-[80%] w-full rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-4">
+            class="flex items-center md:w-[100%] w-full rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-4">
             <div class="w-1/4 flex justify-center">
               <img src="https://img.icons8.com/ios-glyphs/60/ffffff/graduation-cap--v1.png" alt="graduation cap">
             </div>

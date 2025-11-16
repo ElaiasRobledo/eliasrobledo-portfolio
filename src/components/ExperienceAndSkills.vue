@@ -11,23 +11,26 @@
         <!-- Skills -->
         <div data-aos="flip-left" class="mt-16 flex flex-col items-center">
             <div class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full w-[80%]">
+
                 <h1 class="text-4xl font-bold text-white mb-4 text-left md:text-center">
                     My
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-secondary">Skills</span>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-secondary">Skills</span>
                 </h1>
 
-                <div class="mt-8" v-for="skill in Skills" :key="skill.id">
-                    <div class="flex items-end justify-between">
-                        <h4 class="font-semibold uppercase text-white">{{ skill.name }}</h4>
-                        <h3 class="text-2xl font-bold text-white">{{ skill.width }}</h3>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 mt-8">
+
+                    <div v-for="skill in Skills" :key="skill.id"
+                        class="flex items-center justify-center p-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition">
+                        <img :src="skill.logo" :alt="skill.name" class="h-12 w-12 object-contain" />
                     </div>
-                    <div class="mt-2 h-1 w-full bg-[#131d30] rounded-full">
-                        <div class="h-1 rounded-full bg-primary skill-bar" :data-width="skill.width" style="width: 0">
-                        </div>
-                    </div>
+
                 </div>
+
             </div>
         </div>
+
+
         <!-- Experiences -->
         <div data-aos="flip-left" class="mt-16 flex flex-col items-center">
             <div class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full w-[80%] mx-auto">
@@ -86,55 +89,67 @@ onMounted(() => {
     bars.forEach(bar => observer.observe(bar))
 })
 const Skills = ref([
-    
+
     {
         id: 1,
-        name: 'Proactivity',
-        width: '100%'
+        name: '.NET',
+        logo: 'https://img.icons8.com/?size=100&id=1BC75jFEBED6&format=png&color=000000'
 
     },
     {
         id: 2,
-        name: 'Team Work',
-        width: '100%'
-
+        name: 'Aspire',
+        logo: 'https://aspire.dev/_astro/aspire-logo-32.DGHSFRgf.svg'
     },
-     {
+    {
         id: 3,
-        name: 'Creativity',
-        width: '100%'
-
+        name: 'Blazor',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blazor.png/960px-Blazor.png?20201024035312'
     },
     {
         id: 4,
-        name: '.NET',
-        width: '86%'
-
+        name: 'Linux system administration (Debian-based)',
+        logo: 'https://img.icons8.com/?size=100&id=fG5Tnj4ARIoI&format=png&color=000000'
     },
     {
         id: 5,
-        name: 'Aspire',
-        width: '27%'
-    },
-        {
-        id: 6,
-        name: 'Blazor',
-        width: '44%'
-    },
-    {
-        id: 7,
-        name: 'Linux system administration (Debian-based)',
-        width: '69%'
-    },
-    {
-        id: 8,
         name: 'MongoDB',
-        width: '81%'
+        logo: 'https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png&color=000000'
     },
     {
         id: 6,
         name: 'PostgreSQL',
-        width: '51%'
+        logo: 'https://img.icons8.com/?size=100&id=Pv4IGT0TSpt8&format=png&color=000000'
+    },
+    {
+        id: 7,
+        name: 'Docker',
+        logo: 'https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000'
+    },
+    {
+        id: 8,
+        name: 'DigitalOcean',
+        logo:'https://img.icons8.com/?size=100&id=PJVoaac1LEJy&format=png&color=000000'
+    },
+    {
+        id:9,
+        name:'Cloudflare',
+        logo:'https://img.icons8.com/?size=100&id=fUGx53gD9Jof&format=png&color=000000'
+    },
+    {
+        id:10,
+        name: 'Azure',
+        logo: 'https://img.icons8.com/?size=100&id=VLKafOkk3sBX&format=png&color=000000'
+    },
+    {
+        id:11,
+        name:'Nginx',
+        logo:'https://img.icons8.com/?size=100&id=LhQ8M0RI4YLP&format=png&color=000000'
+    },
+    {
+        id:12,
+        name:'Vue',
+        logo:'https://img.icons8.com/?size=100&id=rY6agKizO9eb&format=png&color=000000'
     }
 ])
 const Experiences = ref([
