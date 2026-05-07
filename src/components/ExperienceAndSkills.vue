@@ -8,7 +8,6 @@
             </span>
         </div>
 
-        <!-- Skills -->
         <div data-aos="flip-left" class="mt-16 flex flex-col items-center">
             <div class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full w-[80%]">
 
@@ -53,6 +52,12 @@
                             {{ element.role }}
                         </h3>
                         <p class="text-white">{{ element.company }}</p>
+                        <p 
+                        class="italic text-gray-300"
+                        style="font-family: 'Cormorant Garamond', serif;"
+                        >
+                        {{ element.description }}
+                        </p>                        
                         <p class="text-gray-300">{{ element.date }}</p>
                     </div>
                 </div>
@@ -157,7 +162,8 @@ const Experiences = ref([
         id: 1,
         role: 'Backend developer',
         company: 'Vulletic EV Chargers',
-        date: 'October 2022 - At present'
+        description: '"This was my first job as a developer. Here I realized tasks specialized on building solid backend using .NET as main technologie for developing. Also, I have taken on important responsibilities such as setting up servers, deploying, and security."',
+        date: 'October 2022 - February 2026'
     }
 ])
 

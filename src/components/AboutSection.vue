@@ -1,10 +1,11 @@
 <template>
-  <section id="about" class="text-white mt-18">
+  <section id="about" class="text-white mt-20">
     <div class="flex flex-col items-center justify-center py-16 px-4 xl:px-16 text-center">
 
       <div class="text-center" data-aos="flip-right">
         <div class="space-y-8 py-8 text-white text-left mb-8">
-          <h2 class="text-4xl font-bold text-center">My <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-secondary"> Education</span></h2>
+          <h2 class="text-4xl font-bold text-center">My <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-secondary"> Education</span></h2>
 
           <div v-for="element in education" :key="element.id"
             class="flex items-center md:w-[100%] w-full rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-4">
@@ -17,11 +18,22 @@
                 class="text-2xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                 {{ element.school }}
               </h3>
+              <h3
+                class="text-2xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                {{ element.intials }}
+              </h3>
               <p class="text-white">{{ element.program }}</p>
               <p class="text-white">{{ element.year }}</p>
             </div>
+            <div class="flex justify-center mt-6 relative z-10">
+              <a href="/titulo2.jpg" target="_blank"
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#16214b] border border-[#1f1641] hover:bg-[#1a275c] transition shadow-lg cursor-pointer">
+                🎓 View Diploma
+              </a>
+            </div>
           </div>
         </div>
+        <br>
       </div>
 
       <h2 class="text-4xl font-bold mb-6">
@@ -29,9 +41,10 @@
       </h2>
 
       <p class="max-w-3xl text-base lg:text-lg text-gray-300">
-      I’m a young developer born in Argentina who loves music and computing.
-      I’m a person curious and passionate  about technologies. 
-      I seek to grow as a professional and  as a person, contributing  in different projects and learning from talented and experienced people.
+        I’m a young developer born in Argentina who loves music and computing.
+        I’m a person curious and passionate about technologies.
+        I seek to grow as a professional and as a person, contributing in different projects and learning from talented
+        and experienced people.
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl pt-12 w-full">
@@ -59,7 +72,6 @@
 <script setup>
 import { ref } from 'vue';
 import { onMounted } from 'vue';
-
 onMounted(() => {
 
   const observer = new IntersectionObserver((entries, obs) => {
@@ -76,10 +88,18 @@ onMounted(() => {
 const education = ref([
   {
     id: 1,
-    school: 'national technological university (UTN FRSFCO)',
+    school: 'national technological university',
+    intials: '(UTN FRSFCO)',
     program: 'Software Development',
-    year:'March 2021 - May 2024'
+    year: 'March 2021 - May 2024'
   }
 ]);
+const project = ref(
+  {
+    id: 1,
+    image: "/src/assets/titulo.jpg",
+    message: "sdsd"
+
+  })
 
 </script>

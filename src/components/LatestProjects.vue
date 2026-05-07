@@ -97,6 +97,15 @@ const Projects = ref([
     title: "Server monitoring service",
     description: "Server monitoring built with Grafana, Node Exporter, and Prometheus.",
     technologies: ["Docker", "Grafana", "Node exporter", "Prometheus", "Ubuntu"]
+  },
+    {
+    id: 6,
+    category: "own-projects",
+    image: "/signalchat.png",
+    message:'The goal is to create a tool for communicating with people through the terminal, regardless of the OS and completely anonymous. The idea is that if you are monitoring, coding, setting a server up, or simply you want to talk with different and random people, you can do it running a simple command on your terminal. You can participate in channels, add contacts, play Doom, create groups, and more, and finally, all your data will be deleted without a footprint of your activity.',
+    title: "Signalchat",
+    description: "This project is currently in developing, the goal is create a cross platform chat service through the Terminal and anoymous, using SignalR for the real time communication.",
+    technologies: [".NET 10", "SignalR", "PostgreSQL", "SpectreConsole","Own project"]
   }
 ]);
 </script>
