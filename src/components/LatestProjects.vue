@@ -13,23 +13,25 @@
       data-aos="fade-right">
       <li v-for="project in Projects" :key="project.id" class="rounded-xl overflow-hidden shadow-lg">
         <!-- Imagen -->
-        <div class="h-52 md:h-[24rem] rounded-t-xl relative group" :style="{
-          backgroundImage: `url(${project.image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }">
-          <!-- Overlay -->
-          <div
-            class="overlay absolute inset-0 bg-[#1a1919] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 items-center justify-center transition-all duration-500">
-            <div class="p-4">
+        <a href="project.url" target="_blank" rel="noopener noreferrer">
+          <div class="h-52 md:h-[24rem] rounded-t-xl relative group cursor-pointer" :style="{
+            backgroundImage: `url(${project.image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }">
 
-              <p class="text-[#ffffff] text-sm leading-relaxed">
-                {{ project.message }}
-              </p>
+            <!-- Overlay -->
+            <div
+              class="overlay absolute inset-0 bg-[#1a1919] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 items-center justify-center transition-all duration-500">
+              <div class="p-4">
+                <p class="text-[#ffffff] text-sm leading-relaxed">
+                  {{ project.message }}
+                </p>
+              </div>
             </div>
 
           </div>
-        </div>
+        </a>
 
         <!-- Info -->
         <div class="bg-[#111a3e] p-4 border border-[#1f1641] rounded-b-xl">
@@ -66,6 +68,7 @@ const Projects = ref([
     id: 2,
     category: "web development",
     image: "/estacion-2.png",
+    url: `https://wevemobility.com`,
     message: 'This was my first project, and thanks to it I learned how a RESTful API work, from development and database integration to managing JSON data, testing, and deploying the application to servers. This experience also taught me the importance of teamwork and delivering effective solutions for end clients.',
     title: "Business management panel",
     description: "This service allows you to create electric charging stations and connect chargers to them.",
@@ -75,7 +78,7 @@ const Projects = ref([
     id: 3,
     category: "web development",
     image: "/admin-panel.png",
-    message:'This platform provides owners an organized and structured way to visualize data from all users, charging stations, and various related objects. This administration panel has features such as banning users, deleting charging stations, and sending global notifications.',
+    message: 'This platform provides owners an organized and structured way to visualize data from all users, charging stations, and various related objects. This administration panel has features such as banning users, deleting charging stations, and sending global notifications.',
     title: "Administration panel",
     description: "Platform that controls and monitors business users.",
     technologies: [".NET 6", "MongoDB"]
@@ -84,7 +87,7 @@ const Projects = ref([
     id: 4,
     category: "web development",
     image: "/firmware-charger.png",
-    message:'The development of this project solved the lack of control over firmware versions. Thanks to Azure Blob Storage, it became possible to store different versions, request a specific one, and retrieve a sorted list of all available versions. This was essential for maintaining proper traceability and ensuring an organized and reliable version management system.',
+    message: 'The development of this project solved the lack of control over firmware versions. Thanks to Azure Blob Storage, it became possible to store different versions, request a specific one, and retrieve a sorted list of all available versions. This was essential for maintaining proper traceability and ensuring an organized and reliable version management system.',
     title: "Firmware version management backend",
     description: "Backend to store, retrieve, delete, and manage electric charger firmware versions.",
     technologies: [".NET 8", "Azure Blob Storage"]
@@ -93,19 +96,19 @@ const Projects = ref([
     id: 5,
     category: "devops",
     image: "/grafana2.png",
-    message:'Thanks to this solution, we are able to monitor server resources. It allows us to control and pay attention to any server changes. I also integrated Slack notifications in case of crashes or overloads. This stack was built using Docker Compose, which allowed us to combine Grafana for data visualization, Node Exporter to collect data, and Prometheus for monitoring and alerting.',
+    message: 'Thanks to this solution, we are able to monitor server resources. It allows us to control and pay attention to any server changes. I also integrated Slack notifications in case of crashes or overloads. This stack was built using Docker Compose, which allowed us to combine Grafana for data visualization, Node Exporter to collect data, and Prometheus for monitoring and alerting.',
     title: "Server monitoring service",
     description: "Server monitoring built with Grafana, Node Exporter, and Prometheus.",
     technologies: ["Docker", "Grafana", "Node exporter", "Prometheus", "Ubuntu"]
   },
-    {
+  {
     id: 6,
     category: "own-projects",
     image: "/signalchat.png",
-    message:'The goal is to create a tool for communicating with people through the terminal, regardless of the OS and completely anonymous. The idea is that if you are monitoring, coding, setting a server up, or simply you want to talk with different and random people, you can do it running a simple command on your terminal. You can participate in channels, add contacts, play Doom, create groups, and more, and finally, all your data will be deleted without a footprint of your activity.',
+    message: 'The goal is to create a tool for communicating with people through the terminal, regardless of the OS and completely anonymous. The idea is that if you are monitoring, coding, setting a server up, or simply you want to talk with different and random people, you can do it running a simple command on your terminal. You can participate in channels, add contacts, play Doom, create groups, and more, and finally, all your data will be deleted without a footprint of your activity.',
     title: "Signalchat",
     description: "This project is currently in developing, the goal is create a cross platform chat service through the Terminal and anoymous, using SignalR for the real time communication.",
-    technologies: [".NET 10", "SignalR", "PostgreSQL", "SpectreConsole","Own project"]
+    technologies: [".NET 10", "SignalR", "PostgreSQL", "SpectreConsole", "Own project"]
   }
 ]);
 </script>

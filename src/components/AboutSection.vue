@@ -49,7 +49,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl pt-12 w-full">
         <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-4">
-          <h3 class="counter text-white font-bold text-3xl">∞</h3>
+          <h3 class="counter text-white font-bold text-3xl">clients++;</h3>
           <p class="text-sm text-gray-300">Happy Clients</p>
         </div>
 
@@ -59,7 +59,7 @@
         </div>
 
         <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-4">
-          <h3 class="counter text-white font-bold text-3xl">3</h3>
+          <h3 class="counter text-white font-bold text-3xl">3,5</h3>
           <p class="text-sm text-gray-300">Years of experience</p>
         </div>
       </div>
